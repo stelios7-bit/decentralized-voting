@@ -30,7 +30,9 @@ app.get('/health', async (req, res) => {
   })
 })
 
-// Contract routes are mounted in a later change.
+// Contract routes
+app.use('/candidates', require('./routes/candidates'))
+app.use('/', require('./routes/voting')) // /vote, /winner
 
 app.use(notFound)
 app.use(errorHandler)
