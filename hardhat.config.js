@@ -1,4 +1,5 @@
 require('@nomicfoundation/hardhat-toolbox')
+require('hardhat-deploy')
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -7,6 +8,9 @@ module.exports = {
     settings: {
       optimizer: { enabled: true, runs: 200 },
     },
+  },
+  namedAccounts: {
+    deployer: 0,
   },
   networks: {
     // local Hardhat node: `npm run node`
